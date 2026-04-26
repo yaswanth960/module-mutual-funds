@@ -36,7 +36,7 @@ export function FundsHomeScreen({ navigation }: Props) {
     <View style={styles.container}>
       <Text style={styles.header}>Invest in mutual funds</Text>
       <Text style={styles.intro}>
-        Explore categories, then open a scheme 
+        Explore categories...
       </Text>
       <FlatList
         data={funds}
