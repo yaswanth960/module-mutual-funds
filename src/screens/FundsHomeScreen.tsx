@@ -7,9 +7,9 @@ import type { MutualFundsStackParamList } from '../types';
 type Props = NativeStackScreenProps<MutualFundsStackParamList, 'FundsHome'>;
 
 const funds = [
-  { id: '1', name: 'Large Cap Funds are there', returns: '18%' },
-  { id: '2', name: 'Mid Cap Fund', returns: '15%' },
-  { id: '3', name: 'Small Cap Fund', returns: '18%' },
+  { id: '1', name: 'Bluechip Large Cap', returns: '11.2% p.a.' },
+  { id: '2', name: 'Growth Mid Cap', returns: '13.8% p.a.' },
+  { id: '3', name: 'Explorer Small Cap', returns: '14.5% p.a.' },
 ];
 
 export function FundsHomeScreen({ navigation }: Props) {
@@ -28,20 +28,23 @@ export function FundsHomeScreen({ navigation }: Props) {
         })
       }>
       <Text style={styles.title}>{item.name}</Text>
-      <Text style={styles.subtitle}>Returns: {item.returns}</Text>
+      <Text style={styles.subtitle}>Indicative return: {item.returns}</Text>
     </TouchableOpacity>
   );
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Mutual Funds</Text>
+      <Text style={styles.header}>Invest in mutual funds</Text>
+      <Text style={styles.intro}>
+        Explore categories, then open a scheme to see details and next steps.
+      </Text>
       <FlatList
         data={funds}
         keyExtractor={item => item.id}
         renderItem={renderItem}
       />
       <PrimaryButton
-        label="Next: Open First Fund"
+        label="Open first scheme"
         onPress={() =>
           navigation.navigate('FundDetails', {
             id: funds[0].id,
@@ -63,21 +66,29 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 22,
     fontWeight: '700',
+    marginBottom: 8,
+    color: '#0f172a',
+  },
+  intro: {
+    fontSize: 15,
+    color: '#64748b',
     marginBottom: 16,
+    lineHeight: 22,
   },
   card: {
     padding: 16,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#f1f5f9',
     borderRadius: 8,
     marginBottom: 12,
   },
   title: {
     fontSize: 16,
     fontWeight: '600',
+    color: '#0f172a',
   },
   subtitle: {
     fontSize: 14,
     marginTop: 4,
-    color: '#555',
+    color: '#475569',
   },
 });

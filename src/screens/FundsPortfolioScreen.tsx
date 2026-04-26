@@ -12,12 +12,13 @@ type Props = NativeStackScreenProps<
 export function FundsPortfolioScreen({ navigation }: Props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Portfolio</Text>
+      <Text style={styles.header}>Your portfolio (sample)</Text>
       <Text style={styles.subtitle}>
-        Track SIPs, gains, and diversification for mutual funds.
+        Track SIPs, current value, and asset mix. In production this would sync
+        with your account and show real balances.
       </Text>
       <PrimaryButton
-        label="Next: Back to Home"
+        label="Back to fund list"
         onPress={() => navigation.navigate('FundsHome')}
       />
     </View>
@@ -26,6 +27,6 @@ export function FundsPortfolioScreen({ navigation }: Props) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#fff' },
-  header: { fontSize: 22, fontWeight: '700', marginBottom: 8 },
-  subtitle: { fontSize: 14, color: '#555', marginBottom: 16 },
+  header: { fontSize: 22, fontWeight: '700', marginBottom: 8, color: '#0f172a' },
+  subtitle: { fontSize: 15, lineHeight: 22, color: '#475569', marginBottom: 16 },
 });

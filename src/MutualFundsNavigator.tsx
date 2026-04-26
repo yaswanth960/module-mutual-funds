@@ -24,12 +24,12 @@ export function MutualFundsNavigator() {
       <Stack.Screen
         name="FundsHome"
         component={FundsHomeScreen}
-        options={{ title: 'Funds Home' }}
+        options={{ title: 'Mutual funds' }}
       />
       <Stack.Screen
         name="FundDetails"
         component={FundDetailsScreen}
-        options={{ title: 'Fund Details' }}
+        options={{ title: 'Scheme details' }}
       />
       <Stack.Screen
         name="FundPerformance"
@@ -39,7 +39,7 @@ export function MutualFundsNavigator() {
       <Stack.Screen
         name="FundsPortfolio"
         component={FundsPortfolioScreen}
-        options={{ title: 'My Portfolio' }}
+        options={{ title: 'Portfolio' }}
       />
     </Stack.Navigator>
   );

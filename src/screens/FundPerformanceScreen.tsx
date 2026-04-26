@@ -12,12 +12,13 @@ type Props = NativeStackScreenProps<
 export function FundPerformanceScreen({ navigation }: Props) {
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Fund Performance</Text>
+      <Text style={styles.header}>Performance & risk</Text>
       <Text style={styles.subtitle}>
-        Analyze monthly performance, consistency, and volatility.
+        Here you would chart rolling returns, drawdowns, and benchmark
+        comparison. This demo screen links onward to a sample portfolio view.
       </Text>
       <PrimaryButton
-        label="Next: Portfolio"
+        label="Go to portfolio"
         onPress={() => navigation.navigate('FundsPortfolio')}
       />
     </View>
@@ -26,6 +27,6 @@ export function FundPerformanceScreen({ navigation }: Props) {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#fff' },
-  header: { fontSize: 22, fontWeight: '700', marginBottom: 8 },
-  subtitle: { fontSize: 14, color: '#555', marginBottom: 16 },
+  header: { fontSize: 22, fontWeight: '700', marginBottom: 8, color: '#0f172a' },
+  subtitle: { fontSize: 15, lineHeight: 22, color: '#475569', marginBottom: 16 },
 });
