@@ -7,7 +7,7 @@ import type { MutualFundsStackParamList } from '../types';
 type Props = NativeStackScreenProps<MutualFundsStackParamList, 'FundsHome'>;
 
 const funds = [
-  { id: '1', name: 'Large Cap Fund', returns: '12%' },
+  { id: '1', name: 'Large Cap Funds are there', returns: '12%' },
   { id: '2', name: 'Mid Cap Fund', returns: '15%' },
   { id: '3', name: 'Small Cap Fund', returns: '18%' },
 ];
